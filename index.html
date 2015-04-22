@@ -1,0 +1,60 @@
+<meta charset="UTF-8">
+
+<script src="js/jquery-min.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/main.js"></script>
+<script src="js/quiz.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
+<link rel="stylesheet" type="text/css" href="css/ri-style.css">
+
+
+<div id="ri-container">
+<div id="question-container"></div>
+<script>
+
+$( document ).ready(function() {
+
+// Gera as questões
+var questao1 = new questionGenerator("Pergunta 1 - Que tipo de coisa você é?","Alternativa A", "Alternativa B", "Alternativa C","Alternativa D","4");
+questao1.response = 1;
+
+var questao2 = new questionGenerator("Pergunta 2 - Que tipo de coisa você é?","Alternativa A", "Alternativa B", "Alternativa C","Alternativa D","4");
+questao2.response = 2;
+
+var questao3 = new questionGenerator("Pergunta 3 - Que tipo de coisa você é?","Alternativa A", "Alternativa B", "Alternativa C","Alternativa D","4");
+questao3.response = 3;
+
+var questao4 = new questionGenerator("Pergunta 4 - Que tipo de coisa você é?","Alternativa A", "Alternativa B", "Alternativa C","Alternativa D","4");
+questao4.response = 4;
+
+var questao5 = new questionGenerator("Pergunta 5 - Que tipo de coisa você é?","Alternativa A", "Alternativa B", "Alternativa C","Alternativa D","4");
+questao5.response = 5;
+
+
+//Adiciona questões ao Pool
+addQuestion(questao1);
+addQuestion(questao2);
+addQuestion(questao3);
+addQuestion(questao4);
+addQuestion(questao5);
+
+questionsSummary();
+
+
+// Abaixo as funções responsáveis pela View
+
+$("#question-container").append(questions[1].question + '<br><br>');
+$("#question-container").append(questions[1].a + '<br>');
+$("#question-container").append(questions[1].b + '<br>');
+$("#question-container").append(questions[1].c + '<br>');
+$("#question-container").append(questions[1].d + '<br>');
+
+});
+
+
+
+
+</script>
+
+</div>
+
